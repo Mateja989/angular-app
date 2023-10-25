@@ -1,0 +1,80 @@
+[
+    {
+      "name": "Dashboard",
+      "route": "/dashboard",
+      "role" : "",
+      "icon" : "assets/dashboard/images/icon/icon_1.svg"
+    },
+    {
+      "name": "Post a job",
+      "route": "/dashboard/postjob",
+      "role" : "Employer",
+      "icon" : "assets/dashboard/images/icon/icon_7.svg"
+    },
+    {
+      "name": "Account",
+      "route": "/dashboard/account",
+      "role" : "",
+      "icon" : "assets/dashboard/images/icon/icon_2.svg"
+    },
+    {
+      "name": "Users",
+      "route": "/dashboard/users",
+      "role" : "Admin",
+      "icon" : "assets/dashboard/images/icon/icon_3.svg"
+    },
+    {
+      "name": "Skills",
+      "route": "/dashboard/skills",
+      "role" : "Admin",
+      "icon" : "assets/dashboard/images/icon/icon_3.svg"
+    },
+    {
+      "name": "Active ads",
+      "route": "/dashboard/aciveads",
+      "role" : "Admin",
+      "icon" : "assets/dashboard/images/icon/icon_3.svg"
+    },
+    {
+        "name": "User activities",
+        "route": "/dashboard/activities",
+        "role" : "Admin",
+        "icon" : "assets/dashboard/images/icon/icon_2.svg"
+    },
+    {
+        "name": "Delete account",
+        "route": "/dashboard/aciveads",
+        "role" : "",
+        "icon" : "assets/dashboard/images/icon/icon_8.svg"
+    },
+    {
+        "name": "Saved jobs",
+        "route": "/dashboard/savedjobs",
+        "role" : "Candidate",
+        "icon" : "assets/dashboard/images/icon/icon_6.svg"
+    },
+    {
+        "name": "Message",
+        "route": "/dashboard/message",
+        "role" : "",
+        "icon" : "assets/dashboard/images/icon/icon_4.svg"
+    },
+    {
+        "name": "Jobs",
+        "route": "/dashboard/jobs",
+        "role" : "Employer",
+        "icon" : "assets/dashboard/images/icon/icon_5.svg"
+    },
+    {
+        "name": "Resume",
+        "route": "/dashboard/resume",
+        "role" : "Candidate",
+        "icon" : "assets/dashboard/images/icon/icon_3.svg"
+    },
+    {
+        "name": "Active jobs",
+        "route": "/dashboard/activejobs",
+        "role" : "Employer",
+        "icon" : "assets/dashboard/images/icon/icon_3.svg"
+    }
+]

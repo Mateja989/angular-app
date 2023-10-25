@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Home",
+      "route": "/home"
+    },
+    {
+      "name": "Jobs",
+      "route": "/jobs"
+    },
+    {
+      "name": "Talents",
+      "route": "/talents"
+    },
+    {
+      "name": "Contact",
+      "route": "/contact"
+    },
+    {
+      "name": "About",
+      "route": "/about"
+    }
+]

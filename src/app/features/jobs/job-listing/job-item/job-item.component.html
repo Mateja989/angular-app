@@ -1,0 +1,39 @@
+<div 
+	class="job-list-one style-two position-relative border-style mb-20"
+	>
+<div class="row justify-content-between align-items-center">
+	<div class="col-md-5">
+		<div class="job-title d-flex align-items-center">
+			<a href="job-details-v1.html" class="logo">
+				<img 
+					src="/assets/images/icon/icon_03.svg" 
+					alt="" 
+					class="lazy-img m-auto">
+				</a>
+			<div class="split-box1">
+			<a href="job-details-v1.html" class="job-duration fw-500">{{ data.experienceName }}</a>
+			<a href="job-details-v1.html" class="title fw-500 tran3s">{{ data.title }}</a>
+	</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="job-location">
+		<a href="job-details-v1.html">Expired date: {{ data.daysLeft }} days</a>
+</div>
+<div class="job-salary"><span class="fw-500 text-dark">${{ data.salaryRange }}</span> / {{data.salaryTypeName}}</div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+<div  class="btn-group d-flex align-items-center justify-content-sm-end xs-mt-20">
+	<button class="apply-btn text-center tran3s">
+        <a class="jobLink" routerLink="/job-details/{{ data.id }}">
+            View
+        </a>
+    </button>
+</div>
+<div  class="btn-group d-flex align-items-center justify-content-sm-end xs-mt-20">
+</div>
+</div>
+</div>
+</div>
+

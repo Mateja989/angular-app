@@ -1,0 +1,68 @@
+<div class="d-flex align-items-center justify-content-between mb-40 lg-mb-30">
+    <h2 class="main-title m0">My active jobs</h2>
+    <div class="short-filter d-flex align-items-center">
+        <div class="text-dark fw-500 me-2">Short by:</div>
+        <select class="nice-select">
+            <option value="0">New</option>
+            <option value="1">Category</option>
+            <option value="2">Job Type</option>
+        </select>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div *ngFor="let x of jobs.data" class="job-list-one style-two position-relative mb-20">
+        <div class="row justify-content-between align-items-center mt-5">
+            <div class="col-xxl-3 col-lg-4">
+                <div class="job-title d-flex align-items-center">
+                    <a href="#" class="logo"><img src="assets/images/logo/media_22.png" alt="" class="lazy-img m-auto"></a>
+                    <a href="#" class="title fw-500 tran3s">{{ x.title }}</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 ms-auto">
+                <div class="job-salary"><span class="fw-500 text-dark">Number of applications</span> / {{ x.applicationCount }}</div>
+            </div>
+            <div *ngIf="x.isActive; else expired" class="col-lg-3 col-md-4 col-sm-6 ms-auto">
+                <a href="#" class="job-duration fw-500">Active</a>
+              </div>
+              
+              <ng-template #expired>
+                <div class="col-lg-3 col-md-4 col-sm-6 ms-auto">
+                  <a href="#" class="job-duration fw-500 part-time">Expired</a>
+                </div>
+              </ng-template>
+              
+            <div class="col-lg-2 col-md-4">
+                <div class="action-dots float-end">
+                    <button class="action-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" [routerLink]="'/dashboard/application-details/' + x.id">
+                              <img src="assets/images/icon/icon_18.svg" alt="" class="lazy-img">
+                              View Apply Candidates
+                            </a>
+                          </li>
+                      <li><a class="dropdown-item" href="#"><img src="assets/images/icon/icon_20.svg" alt="" class="lazy-img"> Edit</a></li>
+                      <li><a class="dropdown-item" href="#"><img src="assets/images/icon/icon_21.svg" alt="" class="lazy-img"> Delete</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- /.job-list-one -->
+</div>
+
+
+<div class="dash-pagination d-flex justify-content-end mt-30">
+    <ul class="style-none d-flex align-items-center">
+        <li><a href="#" class="active">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li>..</li>
+        <li><a href="#">7</a></li>
+        <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+    </ul>
+</div>	

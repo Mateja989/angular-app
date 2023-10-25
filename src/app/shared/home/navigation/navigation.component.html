@@ -1,0 +1,82 @@
+<header class="theme-main-menu menu-overlay menu-style-one sticky-menu">
+    <div class="inner-content position-relative">
+        <div class="top-header">
+            <div class="d-flex align-items-center">
+                <div class="logo order-lg-0">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <img src="./assets/images/logo/logo_01.png" alt="">
+                    </a>
+                </div>
+                <!-- logo -->
+                <div *ngIf="(isLoggedIn$ | async) as isLoggedIn; else notLoggedIn" 
+                    class="right-widget ms-auto order-lg-3"
+                >
+                    <ul class="d-flex align-items-center style-none">
+                        <li class="d-none d-md-block">
+                            <a  routerLink="/dashboard" 
+                                routerLinkActive="active-link" 
+                                class="job-post-btn tran3s">
+                                Profile
+                            </a>
+                        </li>
+
+                        <li class="d-none d-md-block">
+                            <a  routerLink="/login" 
+                                routerLinkActive="active-link" 
+                                class="login-btn-one ">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+
+                <ng-template #notLoggedIn>
+                    <div  
+                    class="right-widget ms-auto order-lg-3"
+                >
+                    <ul class="d-flex align-items-center style-none">
+                        <li class="d-none d-md-block">
+                            <a  routerLink="/registration" 
+                                routerLinkActive="active-link" 
+                                class="job-post-btn tran3s">
+                                Registration
+                            </a>
+                        </li>
+
+                        <li class="d-none d-md-block">
+                            <a  routerLink="/login" 
+                                routerLinkActive="active-link" 
+                                class="login-btn-one ">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+                </ng-template>
+              
+                
+                
+                <!--/.right-widget-->
+                <nav class="navbar navbar-expand-lg p0 ms-lg-5 ms-3 order-lg-2">
+                    <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav align-items-lg-center">
+                            <li class="d-block d-lg-none"><div class="logo"><a href="index.html" class="d-block"><img src="images/logo/logo_01.png" alt="" width="100"></a></div></li>
+                            <ng-container *ngFor="let item of navItems">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" [routerLink]="item.route" role="button">
+                                        {{ item.name }}
+                                    </a>
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div> <!--/.top-header-->
+    </div> <!-- /.inner-content -->
+</header> <!-- /.theme-main-menu -->

@@ -1,0 +1,61 @@
+<h2 class="main-title">Post a New Job</h2>
+<form [formGroup]="addJobForm">
+	<div class="bg-white card-box border-20">
+		<h4 class="dash-title-three">Job Details</h4>
+		<div class="dash-input-wrapper mb-30">
+			<label for="">Job Title*</label>
+			<input type="text" placeholder="Ex: Product Designer" formControlName="title">
+			<span 
+                
+                class="help-block"
+                style = "color: red;"
+            >
+                Please enter the valid title.
+             </span>
+		</div>
+
+		<div class="row align-items-end">
+			<div class="col-md-12">
+			  <div class="dash-input-wrapper mb-30">
+				<label for="categorySelect">Categories*</label>
+				<select class="nice-select" id="categorySelect" formControlName="category" >
+				  <option value="0">Choose one category...</option>
+				  <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+				</select>
+			  </div>
+			  <!-- /.dash-input-wrapper -->
+			</div>
+		  </div>
+		  
+		<div class="row align-items-end">
+			<div class="col-md-12">
+				<div class="dash-input-wrapper mb-30">
+					<label for="">Experience*</label>
+					<select class="nice-select" formControlName="experience">
+						<option value="0">Choose one experiences...</option>
+						<option *ngFor="let exp of experiences" [value]="exp.id">{{ exp.name }}</option>
+					</select>
+					<span 
+                	class="help-block"
+                	style = "color: red;"
+            		>
+						You have to choose experience level.
+             		</span>
+				</div>
+				<!-- /.dash-input-wrapper -->
+			</div>
+		</div>
+		<!--.dash-input-wrapper -->
+		<div class="dash-input-wrapper mb-30">
+			<label for="">Job Description*</label>
+			<textarea class="size-lg" formControlName="description" id="myTextArea"  placeholder="Write about the job in details..."></textarea>
+		</div>
+		
+	</div>
+	<div class="button-group d-inline-flex align-items-center mt-30">
+		<button (click)="uploadJob()" class="dash-btn-two tran3s me-3">Next</button>
+	</div>	
+</form>
+
+
+

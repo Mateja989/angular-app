@@ -1,0 +1,112 @@
+1.Podeli na module aplikaciju(uradjeno otprilike)
+3.Uradi logovanje sa efektom za autologin i citanje tokena iz localstorage i logout
+4.ako stignes uradi i forme genericke 
+//sreda
+1.dashboard ceo 
+
+//cetvrtak
+1.candidate ceo 
+
+//petak
+1. employer ceo
+
+//subota 
+1.sajt ceo
+
+//nedelja 
+hostovanje + sredjivanje svega 
+
+//ponedeljak
+hostovanje + sredjivanje svega 
+//guardovi mogu da se napisu bez ponavljanja koda 
+
+
+Feature moduli su funkcionalnosti oglasi,kandidati,zaposleni,contact,profile itd(324)
+Shared modules recimo forma i ostale stvari koje se koriste apsolutno svuda u aplikaciji
+Core modules 
+
+//shared (forma,li tagovi,direktiva za role ispis)
+
+
+
+
+<h2 class="main-title">Post a New Job</h2>
+<form>
+	<div class="bg-white card-box border-20">
+		<h4 class="dash-title-three">Job Details</h4>
+		<div class="dash-input-wrapper mb-30">
+			<label for="">Job Title*</label>
+			<input type="text"   placeholder="Ex: Product Designer">
+			<span 
+                
+                class="help-block"
+                style = "color: red;"
+            >
+                 Please enter the valid title.
+             </span>
+		</div>
+
+        <app-form-input
+            label="Job Title"
+            placeholder="Ex: Product Designer"
+        ></app-form-input>
+
+
+		<div class="row align-items-end">
+			<div class="col-md-12">
+			  <div class="dash-input-wrapper mb-30">
+				<label for="categorySelect">Categories*</label>
+				<select class="nice-select" id="categorySelect" >
+				  <option value="0">Choose one category...</option>
+				  <option ></option>
+				</select>
+			  </div>
+			  <!-- /.dash-input-wrapper -->
+			</div>
+		  </div>
+		  
+		<div class="row align-items-end">
+			<div class="col-md-12">
+				<div class="dash-input-wrapper mb-30">
+					<label for="">Experience*</label>
+					<select class="nice-select">
+						<option value="0">Choose one experiences...</option>
+					</select>
+					<span 
+                	class="help-block"
+                	style = "color: red;"
+            		>
+						You have to choose experience level.
+             		</span>
+				</div>
+				<!-- /.dash-input-wrapper -->
+			</div>
+		</div>
+		<!--.dash-input-wrapper -->
+		<div class="dash-input-wrapper mb-30">
+			<label for="">Job Description*</label>
+			<textarea class="size-lg" id="myTextArea"  placeholder="Write about the job in details..."></textarea>
+		</div>
+		
+	</div>
+	<!-- /.card-box -->
+	
+	  
+	
+	<div class="button-group d-inline-flex align-items-center mt-30">
+		<button type="submit" class="dash-btn-two tran3s me-3">Next</button>
+		<a href="#" class="dash-cancel-btn tran3s">Cancel</a>
+	</div>	
+</form>
+
+
+//forma validacija i ispis da je uspesno upisan
+
+
+{
+  "id": 11,
+  "title": "Senior Full Stack App Developer",
+  "description": "<h1>Position:&nbsp;Senior Full Stack App Developer</h1>\n<p>Work on projects including the next generation of social network for gamers and AI powered applications and services.&nbsp; Join a team of experienced startup developers building out highly scalable microservice architectures to address a blitz scaled audience.</p>\n<h3><strong>Desirable technology experience:</strong></h3>\n<ul>\n<li>React.js / React Native / Expo</li>\n<li>Firebase</li>\n<li>Node.js</li>\n<li>AWS serverless technologies: Lambda, SQS, SNS, etc.</li>\n<li>Nice to have:\n<ul>\n<li>Vue</li>\n<li>Angular</li>\n<li>PostgreSQL/SQL Server</li>\n<li>Strapi</li>\n</ul>\n</li>\n</ul>\n<h3><strong>Minimum Applicant Requirements:</strong></h3>\n<ul>\n<li>Excellent command of English, written and spoken</li>\n<li>Ability to produce tested applications from business requirements</li>\n<li>Ability to work independently and as a team member</li>\n<li>Self-starting, well-organized, and enthusiastic work style</li>\n<li>At least 5 years working experience in relevant technologies</li>\n<li>Reliable high-speed internet connection and Skype account</li>\n</ul>\n<p>&nbsp;</p>",
+  "experienceName": "Junior",
+  "categoryName": "Security Auditing"
+}

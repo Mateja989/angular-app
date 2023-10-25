@@ -1,0 +1,81 @@
+<h2 class="main-title">Actived Ad for job</h2>
+<form [formGroup]="activateJobAdForm">
+    <div class="bg-white card-box border-20">
+        <h4 class="dash-title-three">Job Details</h4>
+        <div class="row align-items-end">
+            <div class="col-md-12">
+                <div class="dash-input-wrapper mb-30">
+                    <label for="">Jobs*</label>
+                    <select class="nice-select" formControlName="job">
+                        <option value="0">Choose one job...</option>
+                        <option *ngFor="let job of jobDetailsList" [value]="job.id">{{ job.title }}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col-md-6">
+                <div class="dash-input-wrapper mb-30">
+                    <label for="">Salary type*</label>
+                    <select class="nice-select" formControlName="salaryType">
+                        <option value="0">Choose one salary type...</option>
+                        <option *ngFor="let salary of salaryTypes" [value]="salary.id">{{ salary.name }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dash-input-wrapper mb-30">
+                    <input type="text" placeholder="Min" formControlName="min">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dash-input-wrapper mb-30">
+                    <input type="text" placeholder="Max" formControlName="max">
+                </div>
+                <!-- /.dash-input-wrapper -->
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col-md-12">
+                <div class="dash-input-wrapper mb-30">
+                    <label for="">Job type*</label>
+                    <select class="nice-select" formControlName="jobType">
+                        <option value="0">Choose one job type...</option>
+                        <option *ngFor="let type of jobTypes" [value]="type.id">{{ type.name }}</option>
+                    </select>
+                </div>
+            </div>
+            <h4 class="dash-title-three pt-50 lg-pt-30">Skills</h4>
+                    <div class="dash-input-wrapper mb-30">
+                        <label for="">Skills*</label>
+                        <input type="text" placeholder="Add Skills" formControlName="skills">
+                        <div class="skill-input-data d-flex align-items-center flex-wrap">
+                            <button>Design</button>
+                            <button>UI</button>
+                            <button>Digital</button>
+                            <button>Graphics</button>
+                            <button>Developer</button>
+                            <button>Product</button>
+                            <button>Microsoft</button>
+                            <button>Brand</button>
+                            <button>Photoshop</button>
+                            <button>Business</button>
+                            <button>IT & Technology</button>
+                            <button>Marketing</button>
+                            <button>Article</button>
+                            <button>Engineer</button>
+                            <button>HTML5</button>
+                            <button>Figma</button>
+                            <button>Automobile</button>
+                            <button>Account</button>
+                        </div>
+                    </div>
+        </div>
+    </div>
+	<div class="button-group d-inline-flex align-items-center mt-30">
+		<button type="submit" (click)="uploadJobAd()" class="dash-btn-two tran3s me-3">Activate</button>
+	</div>	
+</form>
+
+	
+

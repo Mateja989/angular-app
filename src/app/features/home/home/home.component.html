@@ -1,0 +1,433 @@
+
+		<header class="theme-main-menu sticky-menu">
+			<div class="inner-content position-relative">
+				<div class="top-header">
+					<div class="d-flex align-items-center justify-content-between">
+						<div class="logo order-lg-0">
+							<a routerLink="/home" class="d-flex align-items-center">
+								<img src="assets/images/logo/logo_04.png" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<div *ngIf="(isLoggedIn$ | async) as isLoggedIn; else notLoggedIn"
+                             class="right-widget ms-auto ms-xl-5 order-lg-3">
+							<ul class="d-flex align-items-center style-none">
+								<li>
+                                    <a routerLink="/dashboard" class="fw-500 login-btn-two">
+                                        Profile
+                                    </a>
+                                </li>
+								<li class="d-none d-lg-block ms-4">
+                                    <a (click)="logout()" class="btn-five">
+                                        Logout
+                                    </a>
+                                </li>
+							</ul>
+						</div> 
+
+                        <ng-template #notLoggedIn>
+                            <div class="right-widget ms-auto ms-xl-5 order-lg-3">
+                                <ul class="d-flex align-items-center style-none">
+                                    <li>
+                                        <a routerLink="/login" class="fw-500 login-btn-two">
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li class="d-none d-lg-block ms-4">
+                                        <a routerLink="/registration" class="btn-five">
+                                            Registration
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </ng-template>
+
+						<nav class="navbar navbar-expand-lg p0  ms-3 ms-lg-auto order-lg-2">
+							<button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
+								data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+								aria-label="Toggle navigation">
+								<span></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav">
+									<li class="d-block d-lg-none"><div class="logo"><a href="index.html" class="d-block"><img src="images/logo/logo_04.png" alt="" width="100"></a></div></li>
+									<ng-container *ngFor="let item of navItems">
+										<li class="nav-item dropdown">
+											<a class="nav-link" [routerLink]="item.route" role="button">
+												{{ item.name }}
+											</a>
+										</li>
+									</ng-container>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div> <!--/.top-header-->
+			</div> <!-- /.inner-content -->
+		</header> <!-- /.theme-main-menu -->
+
+		<nav class="category-menu d-none d-lg-block">
+			<ul class="style-none nav-item d-flex align-items-center justify-content-between">
+				<li><a href="job-grid-v3.html">Design & Creative</a></li>
+				<li><a href="job-grid-v3.html">It & Development</a></li>
+				<li><a href="job-grid-v3.html">Trending</a></li>
+				<li><a href="job-grid-v3.html">Web & Mobile Dev</a></li>
+				<li><a href="job-grid-v3.html">Writing</a></li>
+				<li><a href="job-grid-v3.html">Sales & Marketing</a></li>
+				<li><a href="job-grid-v3.html">Music & Audio</a></li>
+				<li><a href="job-grid-v3.html">Video & Animation</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						<li><a class="dropdown-item" href="job-grid-v3.html">AI Services</a></li>
+						<li><a class="dropdown-item" href="job-grid-v3.html">Photography</a></li>
+						<li><a class="dropdown-item" href="job-grid-v3.html">Programming & Tech</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+
+
+		<!-- 
+		=============================================
+			Hero Banner
+		============================================== 
+		-->
+		<div class="hero-banner-three position-relative pt-120 md-pt-80 xs-pt-40 pb-80 lg-pb-20">
+			<div class="img-box">
+				<img src="assets/images/assets/ils_01.svg" alt="" class="lazy-img">
+				<img src="assets/images/assets/ils_01_02.svg" alt="" class="lazy-img shapes screen_01">
+				<img src="assets/images/assets/ils_01_01.svg" alt="" class="lazy-img shapes screen_02 wow fadeInLeft">
+			</div>
+			<div class="container">
+				<div class="position-relative">
+					<div class="row">
+						<div class="col-lg-6 col-md-7">
+							<div class="slogan fw-500 mb-5">#1 Online Marketplace</div>
+							<h1>Find the talents for any job.</h1>
+							<p class="text-lg mt-35 md-mt-30 mb-30 md-mb-20 pe-xl-5">Unlock your potential with quality job & earn from
+							world leading brands & co.</p>
+							<a href="signup.html" class="btn-five">Post a Job</a>
+							<div class="d-flex flex-wrap align-items-center mt-70 lg-mt-50 md-mt-40">
+								<div class="partner-title">Trusted by:</div>
+								<img src="assets/images/assets/media_14.png" alt="" class="lazy-img ms-2 me-4">
+								<img src="assets/images/assets/media_15.png" alt="" class="lazy-img me-4">
+								<img src="assets/images/assets/media_16.png" alt="" class="lazy-img">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- /.hero-banner-two -->
+
+
+		
+		<!-- 
+		=============================================
+			Category Section One
+		============================================== 
+		-->
+		<section class="category-section-one position-relative">
+			<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-lg-8">
+						<div class="title-three">
+							<h2 class="fw-600 color-blue">Explore the marketplace.</h2>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="d-flex justify-content-lg-end">
+							<a href="job-grid-v2.html" class="btn-six d-none d-lg-inline-block">Explore all fields</a>
+						</div>
+					</div>
+				</div>
+				<div class="card-wrapper row justify-content-center mt-45 lg-mt-30">
+					<div class="card-style-one text-center mt-20 wow fadeInUp">
+						<a href="job-grid-v3.html" class="wrapper active">
+							<div class="icon d-flex align-items-center justify-content-center"><img src="assets/images/icon/icon_01.svg" alt="" class="lazy-img"></div>
+							<div class="title fw-500">UI/UX Design</div>
+							<div class="total-job">12k+ Jobs</div>
+						</a>
+					</div>
+					<!-- /.card-style-one -->
+					<div class="card-style-one text-center mt-20 wow fadeInUp" data-wow-delay="0.1s">
+						<a href="job-grid-v3.html" class="wrapper">
+							<div class="icon d-flex align-items-center justify-content-center"><img src="assets/images/icon/icon_02.svg" alt="" class="lazy-img"></div>
+							<div class="title fw-500">Development</div>
+							<div class="total-job">8k+ Jobs</div>
+						</a>
+					</div>
+					<!-- /.card-style-one -->
+					<div class="card-style-one text-center mt-20 wow fadeInUp" data-wow-delay="0.15s">
+						<a href="job-grid-v3.html" class="wrapper">
+							<div class="icon d-flex align-items-center justify-content-center"><img src="assets/images/icon/icon_03.svg" alt="" class="lazy-img"></div>
+							<div class="title fw-500">Marketing</div>
+							<div class="total-job">10k+ Jobs</div>
+						</a>
+					</div>
+					<!-- /.card-style-one -->
+					<div class="card-style-one text-center mt-20 wow fadeInUp" data-wow-delay="0.16s">
+						<a href="job-grid-v3.html" class="wrapper">
+							<div class="icon d-flex align-items-center justify-content-center"><img src="assets/images/icon/icon_04.svg" alt="" class="lazy-img"></div>
+							<div class="title fw-500">Telemarketing</div>
+							<div class="total-job">6k+ Jobs</div>
+						</a>
+					</div>
+					<!-- /.card-style-one -->
+					<div class="card-style-one text-center mt-20 wow fadeInUp" data-wow-delay="0.17s">
+						<a href="job-grid-v3.html" class="wrapper">
+							<div class="icon d-flex align-items-center justify-content-center"><img src="assets/images/icon/icon_05.svg" alt="" class="lazy-img"></div>
+							<div class="title fw-500">Editing</div>
+							<div class="total-job">7k+ Jobs</div>
+						</a>
+					</div>
+					<!-- /.card-style-one -->
+					<div class="card-style-one text-center mt-20 wow fadeInUp" data-wow-delay="0.18s">
+						<a href="job-grid-v3.html" class="wrapper">
+							<div class="icon d-flex align-items-center justify-content-center"><img src="assets/images/icon/icon_06.svg" alt="" class="lazy-img"></div>
+							<div class="title fw-500">Accounting</div>
+							<div class="total-job">17k+ Jobs</div>
+						</a>
+					</div>
+					<!-- /.card-style-one -->
+				</div>
+				<!-- /.card-wrapper -->
+				<div class="text-center mt-40 d-lg-none">
+					<a href="job-grid-v2.html" class="btn-six">Explore all fields</a>
+				</div>
+			</div>
+		</section>
+		<!-- ./category-section-one -->
+
+
+
+
+		<!-- 
+		=============================================
+			Text Feature Three
+		============================================== 
+		-->
+		<section class="text-feature-three position-relative pt-225 xl-pt-200 lg-pt-150 md-pt-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 order-lg-last ms-auto">
+						<div class="wow fadeInRight">
+							<div class="title-two">
+								<div class="sub-title">Why choose us?</div>
+								<h2 class="fw-600 color-blue">World of talent at your fingertips</h2>
+							</div>
+							<div class="accordion accordion-style-one color-two mt-40" id="accordionOne">
+								<div class="accordion-item">
+									<div class="accordion-header" id="headingOne">
+										  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+											Seamless Search
+										  </button>
+									</div>
+									<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOne">
+										<div class="accordion-body">
+											<p>It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.</p>
+										</div>
+									</div>
+								  </div>
+								  <div class="accordion-item">
+									<div class="accordion-header" id="headingTwo">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											Hire top talents
+										  </button>
+									</div>
+									<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionOne">
+										  <div class="accordion-body">
+											<p>It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.</p>
+										</div>
+									</div>
+								  </div>
+								  <div class="accordion-item">
+									<div class="accordion-header" id="headingThree">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											Protected payments, every time
+										  </button>
+									</div>
+									<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionOne">
+										  <div class="accordion-body">
+											<p>It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.</p>
+										</div>
+									</div>
+								  </div>
+							</div> <!-- /.accordion-style-one -->
+							<a href="candidates-v4.html" class="btn-five mt-45 lg-mt-20">Learn More</a>
+						</div>
+					</div>
+					<div class="col-lg-6 order-lg-first">
+						<div class="img-box position-relative rounded-circle d-flex align-items-center justify-content-center wow fadeInLeft">
+							<img src="assets/images/assets/screen_09 (1).png" alt="" class="lazy-img">
+							<img src="assets/images/assets/screen_08.png" alt="" class="lazy-img shapes screen_02">
+							<img src="assets/images/shape/shape_25.svg" alt="" class="lazy-img shapes shape_01">
+						</div>
+						<!-- /.big-circle -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.text-feature-three -->
+		
+		<!--
+		=====================================================
+			FeedBack Section Three
+		=====================================================
+		-->
+		<section class="feedback-section-three position-relative mt-170 xl-mt-150 lg-mt-100">
+			<div class="container position-relative">
+				<div class="row">
+					<div class="col-xl-6 col-lg-7 col-md-8 m-auto">
+						<div class="title-two text-center">
+							<img src="images/lazy.svg" data-src="images/icon/icon_22.svg" alt="" class="lazy-img me-auto ms-auto mb-10">
+							<h2 class="fw-600 color-blue">Check what these clients have to say.</h2>
+						</div>
+					</div>
+				</div>
+
+				<div id="feedBack_carousel" class="carousel slide mt-55 lg-mt-30" data-bs-ride="carousel">
+					<div class="row">
+						<div class="col-xxl-9 col-lg-8 col-md-10 m-auto">
+							<div class="carousel-inner text-center">
+								<div class="carousel-item active" data-bs-interval="1000000">
+									<p>“Very easy to set-up. I had no experience with hosting before signing up with Jobi but they've made everything seem simple.”</p>
+									<div class="d-inline-block position-relative name fw-500 text-dark text-lg">Rashed ka. <span class="fw-normal opacity-50">Italy</span></div>
+								</div>
+								  <div class="carousel-item">
+									<p>“Very easy to set-up. I had no experience with hosting before signing up with Jobi but they've made everything seem simple.”</p>
+									<div class="d-inline-block position-relative name fw-500 text-dark text-lg">Juan Marko. <span class="fw-normal opacity-50">London</span></div>
+								  </div>
+								  <div class="carousel-item">
+									<p>“Very easy to set-up. I had no experience with hosting before signing up with Jobi but they've made everything seem simple.”</p>
+									<div class="d-inline-block position-relative name fw-500 text-dark text-lg">Julia Ark. <span class="fw-normal opacity-50">California</span></div>
+								  </div>
+								  <div class="carousel-item">
+									<p>“Very easy to set-up. I had no experience with hosting before signing up with Jobi but they've made everything seem simple.”</p>
+									<div class="d-inline-block position-relative name fw-500 text-dark text-lg">Shani Milar. <span class="fw-normal opacity-50">Milan</span></div>
+								  </div>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev carousel-btn" type="button" data-bs-target="#feedBack_carousel" data-bs-slide="prev">
+						<i class="bi bi-chevron-left"></i>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next carousel-btn" type="button" data-bs-target="#feedBack_carousel" data-bs-slide="next">
+						<i class="bi bi-chevron-right"></i>
+						<span class="visually-hidden">Next</span>
+					</button>
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#feedBack_carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+							<img src="assets/images/assets/img_22 (1).jpg" alt="" class="lazy-img rounded-circle">
+						</button>
+						<button type="button" data-bs-target="#feedBack_carousel" data-bs-slide-to="1" aria-label="Slide 2">
+							<img src="assets/images/assets/img_23 (1).jpg" alt="" class="lazy-img rounded-circle">
+						</button>
+						<button type="button" data-bs-target="#feedBack_carousel" data-bs-slide-to="2" aria-label="Slide 3">
+							<img src="assets/images/assets/img_24 (1).jpg" alt="" class="lazy-img rounded-circle">
+						</button>
+						<button type="button" data-bs-target="#feedBack_carousel" data-bs-slide-to="3" aria-label="Slide 4">
+							<img src="assets/images/assets/img_25 (1).jpg" alt="" class="lazy-img rounded-circle">
+						</button>
+					  </div>
+				</div>
+			</div>
+		</section>
+		<!-- /.feedback-section-three -->
+
+
+
+		<!-- 
+		=============================================
+			Text Feature Four
+		============================================== 
+		-->
+		<section class="text-feature-four position-relative mt-180 xl-mt-150 lg-mt-100">
+			<div class="container">
+				<div class="bg-wrapper">
+					<div class="row align-items-center">
+						<div class="col-lg-5">
+							<div class="wow fadeInLeft">
+								<div class="title-one">
+									<h2 class="text-white">Collaboration with leading Brands.</h2>
+								</div>
+								<p class="text-white mt-20 mb-45 lg-mb-30">We collaborate with a number of top tier companies on imagining the future of work, have a look.</p>
+								<a href="company-v1.html" class="btn-five">Learn More</a>
+							</div>
+						</div>
+						<div class="col-lg-6 text-center text-lg-end md-mt-40">
+							<div class="big-circle d-inline-block position-relative wow fadeInRight">
+								<img src="assets/images/shape/bg_shape_02.png" alt="" class="lazy-img">
+								<div class="logo rounded-circle d-flex align-items-center justify-content-center">
+									<img src="assets/images/logo/logo_05.png" alt="" class="lazy-img">
+								</div>
+								<div class="brand-icon icon_01 rounded-circle d-flex align-items-center justify-content-center">
+									<img src="assets/images/assets/media_17.png" alt="" class="lazy-img">
+								</div>
+								<div class="brand-icon icon_02 rounded-circle d-flex align-items-center justify-content-center">
+									<img src="assets/images/assets/media_18.png" alt="" class="lazy-img">
+								</div>
+								<div class="brand-icon icon_03 rounded-circle d-flex align-items-center justify-content-center">
+									<img src="assets/images/assets/media_19.png" alt="" class="lazy-img">
+								</div>
+								<div class="brand-icon icon_04 rounded-circle d-flex align-items-center justify-content-center">
+									<img src="assets/images/assets/media_20.png" alt="" class="lazy-img">
+								</div>
+								<div class="brand-icon icon_05 rounded-circle d-flex align-items-center justify-content-center">
+									<img src="assets/images/assets/media_21.png" alt="" class="lazy-img">
+								</div>
+								<div class="brand text-white text-start text-md"><span>100+</span>Leading Brands</div>
+							</div>
+							<!-- /.big-circle -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.text-feature-four -->
+
+
+
+		
+
+
+		
+			<!--
+		=====================================================
+			Job Portal Intro
+		=====================================================
+		-->
+			<section class="job-portal-intro">
+				<div class="container">
+					<div class="wrapper bottom-border pt-70 lg-pt-40 pb-65 lg-pb-40">
+						<div class="row align-items-center">
+							<div class="col-lg-7">
+								<div class="text-center text-lg-start">
+									<h2>Most complete job portal.</h2>
+									<p class="text-md m0 md-pb-20">Signup and start find your job or talents.</p>
+								</div>
+							</div>
+							<div class="col-lg-5">
+								<ul class="btn-group style-none d-flex justify-content-center justify-content-lg-end">
+									<li class="me-2"><a href="job-list-v2.html" class="btn-seven border6">Looking for job?</a></li>
+									<li class="ms-2"><a href="signup.html" class="btn-five border6">Post a job</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<!-- /.job-portal-intro -->
+
+
+
+	
+		
+
+		
+
+
+

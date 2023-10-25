@@ -1,0 +1,97 @@
+<app-navigation></app-navigation>
+
+<div class="inner-banner-one position-relative">
+    <div class="container">
+        <div class="position-relative">
+            <div class="row">
+                <div class="col-xl-6 m-auto text-center">
+                    <div class="title-two">
+                        <h2 class="text-white">Job Details</h2>
+                    </div>
+                    <p class="text-lg text-white mt-30 lg-mt-20">Senior Product & Brand Design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="images/lazy.svg" data-src="images/shape/shape_02.svg" alt="" class="lazy-img shapes shape_01">
+    <img src="images/lazy.svg" data-src="images/shape/shape_03.svg" alt="" class="lazy-img shapes shape_02">
+</div> <!-- /.inner-banner-one -->
+<!-- 
+=============================================
+    Job Details
+============================================== 
+-->
+<section class="job-details pt-100 lg-pt-80 pb-130 lg-pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-9 col-xl-8">
+                <div class="details-post-data me-xxl-5 pe-xxl-4">
+                    <div class="post-date">Job posted by <a href="#" class="fw-500 text-dark">
+                        {{ jobDetails.company }}</a></div>
+                    <h3 class="post-title">Senior Product & Brand Design</h3>
+                    <ul class="share-buttons d-flex flex-wrap style-none">
+                        <li><a href="#" class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-facebook"></i>
+                            <span>Facebook</span>
+                        </a></li>
+                        <li><a href="#" class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-twitter"></i>
+                            <span>Twitter</span>
+                        </a></li>
+                        <li><a href="#" class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-link-45deg"></i>
+                            <span>Copy</span>
+                        </a></li>
+                    </ul>
+
+                    <div class="mt-50 lg-mt-30" [innerHtml]="description">
+                    </div>
+                   
+                </div>
+                <!-- /.details-post-data -->
+            </div>
+
+            <div class="col-xxl-3 col-xl-4">
+                <div class="job-company-info ms-xl-5 ms-xxl-0 lg-mt-50">
+                    <img src="assets/images/logo/media_37.png" alt="" class="lazy-img m-auto logo">
+                    <div class="text-md text-dark text-center mt-15 mb-20">{{ jobDetails.employerName }}</div>
+                    <div class="text-md text-dark text-center comp mt-15 mb-20">{{ jobDetails.company }}</div>
+                    <a href="#" class="website-btn tran3s">Visit website</a>
+
+                    <div class="border-top mt-40 pt-40">
+                        <ul class="job-meta-data row style-none">
+                            <li class="col-xl-7 col-md-4 col-sm-6">
+                                <span>Salary</span>
+                                <div>{{ jobDetails.salaryRange }}</div>
+                            </li>
+                            <li class="col-xl-5 col-md-4 col-sm-6">
+                                <span>Expertise</span>
+                                <div>{{ jobDetails.experienceName }}</div>
+                            </li>
+                            <li class="col-xl-7 col-md-4 col-sm-6">
+                                <span>Salary Type</span>
+                                <div>{{ jobDetails.salaryTypeName }}</div>
+                            </li>
+                            <li class="col-xl-5 col-md-4 col-sm-6">
+                                <span>Date Exp.</span>
+                                <div>{{ jobDetails.daysLeft }} days</div>
+                            </li>
+                        </ul>
+
+                        <div class="job-tags d-flex flex-wrap pt-15">
+                            <a href="#" *ngFor="let x of jobDetails.skillNames">{{ x }}</a>
+                        </div>
+                        <a *ngIf="isLoggedIn" 
+                            [appRoleBasedLink]="'Candidate'"
+                            class="btn-one w-100 mt-25"
+                            (click)="jobApplication()"
+                            >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+                <!-- /.job-company-info -->
+            </div>
+        </div>
+    </div>
+</section>
